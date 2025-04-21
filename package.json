@@ -7,6 +7,6 @@
     "uuid": "^11.1.0"
   },
   "scripts": {
-    "start" : "node app.js"
+    "start" : "node public/js/app.js"
   }
 }
