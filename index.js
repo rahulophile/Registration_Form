@@ -16,10 +16,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    database: "g_form",
-    password: "Deepak@0427",
+    host: process.env.DB_HOST,        
+    user: process.env.DB_USER,        
+    password: process.env.DB_PASS,    
+    database: process.env.DB_NAME,
 });
 
 app.get("/", (req, res) => {
@@ -45,6 +45,6 @@ app.post("/", (req, res) => {
 });
 
 
-app.listen(8080, () => {
-    console.log("Server is running on port 8080");
+app.listen(process.env.PORT, () => {
+    console.log("Server is running on port", process.env.PORT);
 });
