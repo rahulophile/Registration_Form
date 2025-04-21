@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Register Now for Coding Club Test</h1>
+        <form action="/" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="registration">Registration Number:</label>
+            <input type="text" id="registration" name="registration" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" required>
+
+            <label for="batch">Batch:</label>
+            <input type="text" id="batch" name="batch" required>
+
+            <label for="motivation">Why do you want to participate? (Optional)</label>
+            <textarea id="motivation" name="motivation" rows="3"></textarea>
+
+            <% if (typeof errorMessage !== 'undefined') { %>
+                <h2 style="color:red;"><%= errorMessage %></h2>
+            <% } %>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

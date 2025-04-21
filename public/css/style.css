@@ -1,0 +1,110 @@
+/* Dark coder theme */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #00ffc3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 2px solid #00ffc3;
+    box-shadow: 0 0 20px #00ffc3;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #00ffc3;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #00ffc3;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #00ffc3;
+    border: 1px solid #00ffc3;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #00fff2;
+    box-shadow: 0 0 8px #00fff2;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #00ffc3;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00bfa6;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00ffc3;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive Breakpoints === */
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
